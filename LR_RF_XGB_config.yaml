@@ -1,0 +1,13 @@
+PATH :
+  INPUT : "path_to_input_files/"
+  OUTPUT : "path_to_output_folder/"
+
+CLASSIFIER : ['logistic_regression', 'random_forest', 'xgboost'] # Classifiers to use
+
+CV : ['skf'] # Cross-validation strategies
+
+K : [10]  # Number of folds for cross-validation
+
+DBS : ['biogrid', 'intact', 'hippie'] # PPI network databases
+
+NUM : [0,1,2,3,4,5,6,7,8,9] #Random seeds numbers

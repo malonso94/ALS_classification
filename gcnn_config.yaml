@@ -1,0 +1,17 @@
+PATH :
+  INPUT : "path_to_input_data/"
+  OUTPUT : "path_to_output_folder/"
+
+
+KFOLD : [0.1] #10-fold cross-validation
+EPOCHS : [100] #Number of epochs for training
+EV_FREQ : [5] #Evaluation frequency
+POOL : ["mpool1"]  #mpool1 = Max pooling, apool1 = Average pooling
+DROPOUT : [1] #1 = No dropout, 0.8 = 20% dropout
+LEVELS : [2] #Number of levels in the graph convolutional network
+POL_ORD : [8] #Polynomial order
+L_RATE : [0.001] #Learning rate
+
+NUM : ['0','1','2','3','4','5','6','7','8','9'] #Random seed numbers
+
+DB : ['biogrid', 'hippie', 'intact'] #PPI network databases
