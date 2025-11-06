@@ -1,8 +1,7 @@
 #!python
 
 """
-Running the GLRP on GCNN model trained on gene expression data. 90% is for training and 10% for testing. 
-Relevances obtained for 10% of testing patients are written into the file "relevances_rendered_class.csv". From these relevances the patient subnetworks can be built.
+Relevances obtained for testing patients are written into the file "relevances_rendered_class.csv".
 The file "predicted_concordance.csv" contains a table showing which patients were predicted correctly.
 """
 import numpy as np
@@ -156,10 +155,10 @@ if __name__ == "__main__":
     params['K']              = [pol_ord for i in range(0, lvs)]  # Polynomial orders.
     params['p']              = [2 for i in range(0, lvs)]    # Pooling sizes.
     params['M']              = [512, 128, C]  # Output dimensionality of fully connected layer L, F, K, p, M
-    params['dropout']        = dropout # Originalmente era 1 (sin dropout)
-    params['learning_rate']  = learning_rate #0.001
+    params['dropout']        = dropout # Originally was 1 (without dropout)
+    params['learning_rate']  = learning_rate # Originally was 0.001
     params['decay_rate']     = 0.95
-    params['momentum']       = 0 #0 para adam, !=0 para momentum
+    params['momentum']       = 0 #0 for adam, !=0 for momentum
     params['decay_steps']    = n_train / params['batch_size']
     params['checkpoint_path']    = checkpoint_path
 
